@@ -1,0 +1,26 @@
+Order
+      int idNumber;
+      bool buyOrSell;
+      int shares;
+      int limit;
+      int entryTime;
+      int eventTime;
+      Order *nextOrder;
+      Order *prevOrder;
+      Limit *parentLimit;
+
+    Limit 
+      int limitPrice;
+      int size;
+      int totalVolume;
+      Limit *parent;
+      Limit *leftChild;
+      Limit *rightChild;
+      Order *headOrder;
+      Order *tailOrder;
+
+    Book
+      Limit *buyTree;
+      Limit *sellTree;
+      Limit *lowestSell;
+      Limit *highestBuy;
